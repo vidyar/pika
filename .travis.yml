@@ -14,15 +14,3 @@ install:
 services:
   - rabbitmq
 script: nosetests -c nose.cfg --with-coverage --cover-package=pika
-after_success:
-  - codecov
-deploy:
-  distributions: sdist bdist_wheel
-  provider: pypi
-  user: crad
-  on:
-    python: 2.7
-    tags: true
-    all_branches: true
-  password:
-    secure: "V/JTU/X9C6uUUVGEAWmWWbmKW7NzVVlC/JWYpo05Ha9c0YV0vX4jOfov2EUAphM0WwkD/MRhz4dq3kCU5+cjHxR3aTSb+sbiElsCpaciaPkyrns+0wT5MCMO29Lpnq2qBLc1ePR1ey5aTWC/VibgFJOL7H/3wyvukL6ZaCnktYk="
